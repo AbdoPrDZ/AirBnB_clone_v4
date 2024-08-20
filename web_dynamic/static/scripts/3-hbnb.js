@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
   // task 3
-  $.ajax('http://0.0.0.0:5001/api/v1/status').done(function (data) {
+  $.ajax(window.host + '/api/v1/status').done(function (data) {
     if (data.status === 'OK') {
       $('#api_status').addClass('available');
     } else {
@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
   // task 4
   $.ajax({
     type: 'POST',
-    url: 'http://0.0.0.0:5001/api/v1/places_search/',
+    url: window.host + '/api/v1/places_search/',
     contentType: 'application/json',
     data: JSON.stringify({})
   }).done(function (data) {
