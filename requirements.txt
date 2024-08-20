@@ -1,0 +1,7 @@
+flask
+flask_cors
+sqlalchemy
+pep8
+fabric
+flasgger
+requests
